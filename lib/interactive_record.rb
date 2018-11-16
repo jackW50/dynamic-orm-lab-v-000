@@ -56,7 +56,7 @@ class InteractiveRecord
     sql =<<-SQL
         SELECT * 
         FROM #{table_name}
-        WHERE #{table_name}.#{keys[0]} = '#{values[0]}'
+        WHERE #{table_name}.#{keys[0]} = #{values[0]}
     SQL
     
     DB[:conn].execute(sql)
