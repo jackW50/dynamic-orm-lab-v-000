@@ -60,7 +60,7 @@ class InteractiveRecord
         WHERE ? = ?
     SQL
     
-    DB[:conn].execute(sql, keys[0], values[0])
+    DB[:conn].execute(sql)
   end 
   
   def values_for_insert
