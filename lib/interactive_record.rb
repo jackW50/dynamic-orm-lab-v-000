@@ -56,10 +56,10 @@ class InteractiveRecord
     sql =<<-SQL
         SELECT * 
         FROM #{table_name}
-        WHERE #{keys[0] = values[0]
+        WHERE #{keys[0]} = #{values[0]}
     SQL
     
-    DB[:conn].execute(sql, keys[0], values[0])
+    DB[:conn].execute(sql)
   end 
   
   def values_for_insert
