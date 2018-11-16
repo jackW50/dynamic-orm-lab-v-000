@@ -49,6 +49,7 @@ class InteractiveRecord
   def self.find_by(row={})
     keys = []
     values = []
+    binding.pry
     row.each do |key, value|
       keys << key.to_s 
       values << value 
