@@ -52,7 +52,7 @@ class InteractiveRecord
     binding.pry
     row.each do |key, value|
       keys << key.to_s 
-      values << value.to_s 
+      values << value 
     end 
     sql =<<-SQL
         SELECT * 
