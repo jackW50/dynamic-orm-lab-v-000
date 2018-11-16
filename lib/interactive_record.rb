@@ -55,7 +55,7 @@ class InteractiveRecord
     end 
     sql =<<-SQL
         SELECT * 
-        FROM #{table_name_for_insert}
+        FROM #{table_name}
         WHERE ? = ?
     SQL
     
