@@ -46,7 +46,8 @@ class InteractiveRecord
   end 
   
   self.find_by(row={})
-    
+    keys = []
+    values = []
     sql =<<-SQL
         SELECT
     SQL
