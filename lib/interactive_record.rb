@@ -45,7 +45,7 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end 
   
-  self.find_by(row={})
+  def self.find_by(row={})
     keys = []
     values = []
     row.each do |key, value|
