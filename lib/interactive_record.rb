@@ -48,9 +48,17 @@ class InteractiveRecord
   self.find_by(row={})
     keys = []
     values = []
+    row.each do |key, value|
+      keys << key 
+      values << value 
+    end 
     sql =<<-SQL
-        SELECT
+        SELECT * 
+        FROM #{table_for_insert}
+        WHERE ? = ?
     SQL
+    
+    DB[:conn].execute(sql, keys[0], values[0])
   
   def values_for_insert
     values = []
