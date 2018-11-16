@@ -51,7 +51,7 @@ class InteractiveRecord
     values = []
     row.each do |key, value|
       keys << key.to_s 
-      values << value 
+      values << value.to_s 
     end 
     sql =<<-SQL
         SELECT * 
